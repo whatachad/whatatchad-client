@@ -13,13 +13,19 @@ const Header = () => {
       <DesktopNavigation>
         <ul>
           <li>
-            <a href="/workout">Workout 💪</a>
+            <Link href="/workout">
+              <a>Workout 💪</a>
+            </Link>
           </li>
           <li>
-            <a href="/wealth">Wealth 💰</a>
+            <Link href="/wealth">
+              <a>Wealth 💰</a>
+            </Link>
           </li>
           <li>
-            <a href="/passion">Passion 🔥</a>
+            <Link href="/passion">
+              <a>Passion 🔥</a>
+            </Link>
           </li>
         </ul>
       </DesktopNavigation>
