@@ -5,12 +5,12 @@
 
 ## 👨‍💻 Contributors
 
-| Contributor                                    | Role     |
-| ---------------------------------------------- | -------- |
-| [Seongyeon Ha](https://github.com/iDevBrandon) | Frontend |
-| [ooo](https://github.com/wugusaud77)           | Frontend |
-| [ooo](https://github.com/hopee0411)            | Backend  |
-| [ooo](https://github.com/Big-Cir97)            | Backend  |
+| Contributor                                      | Role     |
+| ------------------------------------------------ | -------- |
+| [Seongyeon Ha](https://github.com/iDevBrandon)   | Frontend |
+| [GyeongSeok Lee](https://github.com/lekosk2001)  | Frontend |
+| [Sky](https://github.com/hopee0411)              | Backend  |
+| [Jinhyeon Kwak](https://github.com/JinhyeonKwak) | Backend  |
 
 ## 🔨 Stacks
 
