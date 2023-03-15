@@ -1,64 +1,44 @@
 import Link from "next/link";
 import { useState } from "react";
+import Tab from "./Tab";
+import { NavigationTabContainer } from "./styles";
 
 function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
-    <nav>
-      <div className="logo">
+    <NavigationTabContainer>
+      <h2 className="">
         <Link href="/">Home</Link>
-      </div>
+      </h2>
 
-      <div className={`menu ${isMenuOpen ? "open" : ""}`}>
+      <div className="">
         <ul>
-          <li>
-            <Link href="/workout">Workout</Link>
-            <ul>
-              <li>
-                <Link href="/workout/map">Map</Link>
-              </li>
-              <li>
-                <Link href="/workout/list">List</Link>
-              </li>
-              <li>
-                <Link href="/workout/add-location">Add a location</Link>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Link href="/manager">Manager</Link>
-            <ul>
-              <li>
-                <Link href="/manager/calendar">Calendar</Link>
-              </li>
-              <li>
-                <Link href="/manager/monthly-report">Monthly Report</Link>
-              </li>
-              <li>
-                <Link href="/manager/budget-setting">Budget Setting</Link>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Link href="/setting">Setting</Link>
-            <ul>
-              <li>
-                <Link href="/setting/service-guide">Service Guide</Link>
-              </li>
-            </ul>
-          </li>
+          <h2 className="">
+            <Link href="/">Workout</Link>
+          </h2>
+          <Tab text={"지도"} path="/workout/map" />
+          <Tab text={"리스트"} path="/workout/list" />
+          <Tab text={"운동시설추가"} path="/workout/add-location" />
+        </ul>
+        <ul>
+          <h2 className="">
+            <Link href="/">Manage</Link>
+          </h2>
+          <Tab text={"캘린더"} path="/workout/map" />
+          <Tab text={"월별 내역"} path="/workout/list" />
+          <Tab text={"예산 설정"} path="/workout/add-location" />
+        </ul>
+        <ul>
+          <h2 className="">
+            <Link href="/">Setting</Link>
+          </h2>
+          <Tab text={"서비스 안내"} path="/workout/map" />
         </ul>
       </div>
 
-      <div className="menu-icon" onClick={toggleMenu}>
-        <i className={`fa fa-${isMenuOpen ? "times" : "bars"}`}></i>
+      <div className="menu-icon">
+        <i className=""></i>
       </div>
-    </nav>
+    </NavigationTabContainer>
   );
 }
 

@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Navigation from "@/components/NavigationTab";
 import Head from "next/head";
+import styled from "styled-components";
 
 export default function Home() {
   return (
@@ -13,11 +14,16 @@ export default function Home() {
         <link rel="icon" href="/images/trident.png" />
       </Head>
       <Header />
-      <main>
+      <MainContainer>
         <Navigation />
         <div>contents</div>
-      </main>
+      </MainContainer>
       <Footer />
     </>
   );
 }
+
+const MainContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+`;
