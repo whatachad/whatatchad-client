@@ -1,5 +1,5 @@
 import React from "react";
-import { DesktopNavigation, HeaderContainer } from "./styles";
+import { HeaderContainer, Logo, SearchTab, UserAuth } from "./styles";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,29 +7,24 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Link href="/" className="logo">
-        <a style={{ fontSize: "5rem" }}>🔱</a>
+        <Logo>What a Chad</Logo>
       </Link>
+      {/* <!-- Search bar --> */}
+      <SearchTab>
+        <input type="text" placeholder="내 주변 운동시설 검색" />
+      </SearchTab>
 
-      <DesktopNavigation>
+      {/* <!-- Login and Sign up tabs --> */}
+      <UserAuth>
         <ul>
           <li>
-            <Link href="/workout">
-              <a>Workout 💪</a>
-            </Link>
+            <a href="#">Login</a>
           </li>
           <li>
-            <Link href="/wealth">
-              <a>Wealth 💰</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/passion">
-              <a>Passion 🔥</a>
-            </Link>
+            <a href="#">Sign Up</a>
           </li>
         </ul>
-      </DesktopNavigation>
-      {/* <div className='Mobile'>Mobile header later</div> */}
+      </UserAuth>
     </HeaderContainer>
   );
 };

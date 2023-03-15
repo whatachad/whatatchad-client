@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Navigation from "@/components/NavigationTab";
 import Head from "next/head";
 
 export default function Home() {
@@ -12,7 +13,10 @@ export default function Home() {
         <link rel="icon" href="/images/trident.png" />
       </Head>
       <Header />
-      <main>WaC Intro</main>
+      <main>
+        <Navigation />
+        <div>contents</div>
+      </main>
       <Footer />
     </>
   );
