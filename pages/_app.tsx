@@ -1,3 +1,4 @@
+import Layout from "@/components/common/Layout";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -18,7 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
           <meta charSet="utf-8" />
           <title>What a Chad</title>
         </Head>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </>
   );
