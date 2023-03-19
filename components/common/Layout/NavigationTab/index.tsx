@@ -29,7 +29,7 @@ function Navigation() {
         <h2>
           <Link href="/setting/service">Setting</Link>
         </h2>
-        <Tab text={"서비스 안내"} path="/setting/service" />
+        <Tab text={"서비스 안내"} path="/setting" />
       </Tabs>
       {/* <div className="menu-icon">
         <i></i>
