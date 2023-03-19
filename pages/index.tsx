@@ -1,6 +1,3 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Navigation from "@/components/NavigationTab";
 import Head from "next/head";
 import styled from "styled-components";
 
@@ -13,17 +10,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/trident.png" />
       </Head>
-      <Header />
       <MainContainer>
-        <Navigation />
-        <div>contents</div>
+        contents
       </MainContainer>
-      <Footer />
     </>
   );
 }
 
 const MainContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 5fr;
+  display: flex;
+  width: 100%;
 `;
