@@ -18,7 +18,6 @@ export default function Home() {
 }
 
 const MainContainer = styled.div`
-  padding: 40px 20px;
   display: flex;
   width: 100%;
 `;

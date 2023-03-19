@@ -11,7 +11,7 @@ function Navigation() {
 
       <Tabs>
         <h2>
-          <Link href="/workout">Workout</Link>
+          <Link href="/workout/map">Workout</Link>
         </h2>
         <Tab text={"지도"} path="/workout/map" />
         <Tab text={"리스트"} path="/workout/list" />
@@ -19,7 +19,7 @@ function Navigation() {
       </Tabs>
       <Tabs>
         <h2>
-          <Link href="/manage">Manage</Link>
+          <Link href="/manage/calendar">Manage</Link>
         </h2>
         <Tab text={"캘린더"} path="/manage/calendar" />
         <Tab text={"월별 내역"} path="/manage/list" />
@@ -27,7 +27,7 @@ function Navigation() {
       </Tabs>
       <Tabs>
         <h2>
-          <Link href="/setting">Setting</Link>
+          <Link href="/setting/service">Setting</Link>
         </h2>
         <Tab text={"서비스 안내"} path="/setting/service" />
       </Tabs>

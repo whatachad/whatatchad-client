@@ -5,9 +5,9 @@ import Link from "next/link";
 const Header = () => {
   return (
     <HeaderContainer>
-      <Link href="/">
-        <Logo>What a Chad</Logo>
-      </Link>
+      <Logo>
+        <Link href="/">What a Chad</Link>
+      </Logo>
       {/* <!-- Search bar --> */}
       <SearchTab>
         <SearchIcon />
