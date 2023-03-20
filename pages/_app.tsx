@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { ThemeProvider, DefaultTheme } from "styled-components";
+import wrapper  from "../redux/store";
 
 const theme: DefaultTheme = {
   colors: {
@@ -11,13 +12,14 @@ const theme: DefaultTheme = {
   },
 };
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeProvider theme={theme}>
         <Head>
           <meta charSet="utf-8" />
           <title>What a Chad</title>
+          <link rel="shortcut icon" href="/images/trident.png" />
         </Head>
         <Layout>
           <Component {...pageProps} />
@@ -26,3 +28,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+export default wrapper.withRedux(App);
