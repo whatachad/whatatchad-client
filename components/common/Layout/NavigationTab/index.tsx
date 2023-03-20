@@ -27,9 +27,9 @@ function Navigation() {
       </Tabs>
       <Tabs>
         <h2>
-          <Link href="/setting/service">Setting</Link>
+          <Link href="/setting">Setting</Link>
         </h2>
-        <Tab text={"서비스 안내"} path="/setting" />
+        <Tab text={"설정"} path="/setting" />
       </Tabs>
       {/* <div className="menu-icon">
         <i></i>
