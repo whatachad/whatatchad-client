@@ -1,10 +1,11 @@
+import ManageCalendar_container from '@/components/unit/ManageCalendar/ManageCalendar_container'
 import React from 'react'
 
 type Props = {}
 
 const index = (props: Props) => {
     return (
-        <div>calendar</div>
+        <ManageCalendar_container />
     )
 }
 
