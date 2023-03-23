@@ -17,10 +17,10 @@ const Header = () => {
       {/* <!-- Login and Sign up tabs --> */}
       <UserAuth>
         <li>
-          <a href="#">Login</a>
+          <a href="/login">Login</a>
         </li>
         <li>
-          <a href="#">Sign Up</a>
+          <a href="/signup">Sign Up</a>
         </li>
       </UserAuth>
     </HeaderContainer>
