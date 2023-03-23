@@ -6,8 +6,8 @@ import {
   SearchTab,
   UserAuth,
 } from "./styles";
-import Link from "next/link";
 import { FiSearch } from "react-icons/fi";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -26,10 +26,14 @@ const Header = () => {
       {/* <!-- Login and Sign up tabs --> */}
       <UserAuth>
         <li>
-          <a href="/login">Login</a>
+          <Link href="/login">
+            <a>Login</a>
+          </Link>
         </li>
         <li>
-          <a href="/signup">Sign Up</a>
+          <Link href="/signup">
+            <a>Sign Up</a>
+          </Link>
         </li>
       </UserAuth>
     </HeaderContainer>
