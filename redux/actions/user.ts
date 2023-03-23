@@ -1,16 +1,13 @@
 import { SignupData } from "@/types/users";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import axios from "../../utils/api";
 
 // 회원가입
 export const signup = createAsyncThunk(
   "user/signup",
   async (data: SignupData, thunkAPI) => {
     try {
-      const response = await axios.post(
-        "http://129.154.212.45:3000/v1/signUp",
-        data
-      );
+      const response = await axios.post("/signUp", data);
       const token = response.data.token;
       localStorage.setItem("token", token);
       return response.data;
