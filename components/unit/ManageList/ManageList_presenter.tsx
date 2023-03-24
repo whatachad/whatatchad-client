@@ -21,6 +21,7 @@ const ManageList_presenter = (props: Props) => {
         <PageTitle title='Manage' location='청주시 흥덕구 복대동' />
         <PageDesc>월별내역</PageDesc>
         <PageContentsBox>
+            <S.ScheduleHeader><p>2023. 01.</p>01</S.ScheduleHeader>
             <S.AccountSection>
                 <S.SectionHeader>
                     <S.ListLabel>
@@ -79,6 +80,7 @@ const ManageList_presenter = (props: Props) => {
                 </S.ListBox>
             </S.DayWorkSection>
         </PageContentsBox>
+        <PageContentsBox></PageContentsBox>
     </PageContainer>)
 }
 

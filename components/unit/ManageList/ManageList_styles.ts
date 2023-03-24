@@ -8,6 +8,16 @@ export const AccountSection = styled.section`
     flex: 2;
 `
 
+export const ScheduleHeader = styled.h2`
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    p{ 
+        font-size: 13px;
+        font-weight: 400;
+    }
+`
+
 export const DayWorkSection = styled.section`
     width: 100%;
     display: flex;
@@ -27,7 +37,7 @@ export const ListAddButton = styled.button`
     color: #fff;
     border: 2px solid #666666;
     border-radius: 10px;
-    height: 60px;
+    height: 40px;
     display: flex;
     justify-content: center;
     padding-right: 15px;
