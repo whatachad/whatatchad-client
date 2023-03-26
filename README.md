@@ -15,7 +15,7 @@
 ## 🔨 Stacks
 
 ### Front
-
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
@@ -50,8 +50,10 @@
 └─tsconfig.json
 ```
 
-## 📚 Database ERD
+## ⚡ Design
 
-## ⚡ Preview
+[![Figma](https://img.shields.io/badge/figma-%2320232a.svg?style=for-the-badge&logo=Figma&logoColor=#000000)](https://www.figma.com/file/aeuWbLtbaP8ttYFRufwjjq/What-A-Chad-Frontend?node-id=0-1&t=olatIYtZe48ZGTkM-0)
 
-![Figma](https://img.shields.io/badge/figma-%2320232a.svg?style=for-the-badge&logo=Figma&logoColor=#000000)
+## [📝 API Specification](https://github.com/whatachad/plan/wiki/API-%EB%AA%85%EC%84%B8%EC%84%9C)
+
+## [📚 Database ERD](https://www.erdcloud.com/d/oRhH8xPAPBZTDtB4Y)
