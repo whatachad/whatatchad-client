@@ -12,10 +12,10 @@ function Navigation() {
 
       <Tabs>
         <TabTitle>
-          <Link href="/workout/map">Workout</Link>
+          <Link href="/workout">Workout</Link>
         </TabTitle>
-        <Tab text={"지도"} path="/workout/map" icon={<BiMapAlt />} />
-        <Tab text={"리스트"} path="/workout/list" icon={<BiGridAlt />} />
+        {/* <Tab text={"지도"} path="/workout/map" icon={<BiMapAlt />} /> */}
+        <Tab text={"리스트"} path="/workout" icon={<BiGridAlt />} />
         <Tab text={"운동시설추가"} path="/workout/add-location" icon={<BiLocationPlus />} />
       </Tabs>
       <Tabs>
