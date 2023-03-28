@@ -17,3 +17,9 @@ export const PageContentsBox = styled.div`
   display: flex;
   gap: 20px;
 `
+
+export const ListBox = styled.ul`
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+`
