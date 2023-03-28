@@ -14,7 +14,7 @@ export const ScheduleBox = styled.li`
 export const AccountSection = styled.section`
     width: 100%;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     flex-direction: column;
     flex: 2;
 `
@@ -32,14 +32,9 @@ export const ScheduleHeader = styled.h2`
 export const DayWorkSection = styled.section`
     width: 100%;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     flex-direction: column;
     flex: 1;
-`
-export const SectionHeader = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 `
 
 export const ListAddButton = styled.button`
@@ -48,14 +43,14 @@ export const ListAddButton = styled.button`
     color: #fff;
     border: 2px solid #666666;
     border-radius: 10px;
-    height: 30px;
+    height: 40px;
     display: flex;
     justify-content: center;
-    padding-right: 15px;
     align-items: center;
     gap: 10px;
     font-size: 15px;
     transition: 0.2s all ease;
+    margin-bottom: 5px;
     svg{
         width: 15px;
         height: 15px;
@@ -65,36 +60,34 @@ export const ListAddButton = styled.button`
     }
 `
 
-export const ListLabel = styled.label`
-    font-size: 15px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-`
-
-export const InnerListBox = styled.ul`
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-`
-
 export const InnerList = styled.li<{disabled:boolean}>`
-    opacity: ${props=>props.disabled?"0.3":"default"};
+    input,p,div{
+        transition: 0.2s all ease;   
+        opacity: ${props=>props.disabled?"0.3":"default"};}
     cursor: pointer;
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
-    background-color: #4D4D4D;
+    background-color: #222222;
     border-radius: 10px;
     padding: 0px 20px;
-    justify-content: space-between;
-    transition: 0.2s all ease;    
+    justify-content: space-between;  
     overflow: hidden;
     :hover{
-        background: #666666;
+        background: #444444;
     }
 `
+
+export const CheckBoxArea = styled.span`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 0px -15px;
+`
+
 
 export const CheckBox = styled.input`
     width: 20px;
@@ -104,24 +97,13 @@ export const CheckBox = styled.input`
     border: 2px solid #fff;
     appearance: none;
     cursor: pointer;
-    transition: 0.1s all ease;
-    
+    transition: 0.1s all ease;    
     &:checked {
         background: #8fd460;
     }
 `
 
-export const ListLeftSide = styled.span`
-    label{
-        cursor: pointer;
-    }
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    
-`
-
-export const ListRightSide = styled.span`
+export const ListSide = styled.span`
     display: flex;
     gap: 15px;
     align-items: center;    
@@ -138,7 +120,7 @@ export const ListText = styled.p`
     
 `
 
-export const CostText = styled.p<{type:string}>`
+export const CostText = styled.p`
     font-size: 15px;
     font-weight: 700;
     min-width: 70px;
@@ -147,5 +129,6 @@ export const CostText = styled.p<{type:string}>`
 
 export const ListSubText = styled.p`
     font-size: 11px;
+    color: gray;
     
 `

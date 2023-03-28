@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import * as S from './ScheduleUI_style'
 import { MdAccountBalanceWallet } from "react-icons/md";
 import { RiTodoFill } from "react-icons/ri";
-import { IoMdAddCircle } from "react-icons/io";
 import AddAccountForm from '../ManageAddForm/AddAccountForm';
 import AddDayWorkForm from '../ManageAddForm/AddDayWorkForm';
 import { ScheduleType } from './ScheduleUI_type';
-import InnerListUI from './InnerListUI';
+import DayWorkUI from './DayWorkUI';
+import AccountUI from './AccountUI';
 
 const allAccountsData = [ // 비동기 통신 결과 예시
     {
@@ -97,57 +97,29 @@ const ScheduleUI = ({ Schedule }: ScheduleType) => {
             </S.ScheduleHeader>
 
             <S.AccountSection>
-                <S.SectionHeader>
-                    <S.ListLabel>
-                        <MdAccountBalanceWallet /> 가계부
-                    </S.ListLabel>
-                </S.SectionHeader>
-                <S.InnerListBox>
-                    {!addAccountIsOpen && <S.ListAddButton
-                        onClick={() => {
-                            setAddAccountIsOpen(prev => !prev)
-                        }}><IoMdAddCircle /> 추가</S.ListAddButton>}
-                    {addAccountIsOpen && <AddAccountForm
-                        setAddAccountIsOpen={setAddAccountIsOpen}
-                    />}
-                    {allAccountsData.map(account => {
-                        return (
-                            <S.InnerList disabled={false} key={account.accountId}>
-                                <S.ListLeftSide>
-                                    <S.ListSubText>
-                                        {`${account.month}-${account.day} │ ${account.time}`}
-                                    </S.ListSubText>
-                                    <S.ListText>{account.title}</S.ListText>
-                                </S.ListLeftSide>
-                                <S.ListRightSide>
-                                    <S.ListSubText>{account.type === "income" ? "수입" : "지출"}</S.ListSubText>
-                                    <S.CostText type={account.type}>{account.cost.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원</S.CostText>
-                                </S.ListRightSide>
-                            </S.InnerList>
-                        )
-                    })}
-                </S.InnerListBox>
+                {!addAccountIsOpen && <S.ListAddButton
+                    onClick={() => {
+                        setAddAccountIsOpen(prev => !prev)
+                    }}><MdAccountBalanceWallet /> 가계부 추가</S.ListAddButton>}
+                {addAccountIsOpen && <AddAccountForm
+                    setAddAccountIsOpen={setAddAccountIsOpen}
+                />}
+                {allAccountsData.map(account =>
+                    <AccountUI key={account.accountId} data={account} />
+                )}
             </S.AccountSection>
 
             <S.DayWorkSection>
-                <S.SectionHeader>
-                    <S.ListLabel>
-                        <RiTodoFill />할 일
-                    </S.ListLabel>
-                </S.SectionHeader>
-                <S.InnerListBox>
-                    {!addDayWorkIsOpen && <S.ListAddButton
-                        onClick={() => {
-                            setAddDayWorkIsOpen(prev => !prev)
-                        }}><IoMdAddCircle /> 추가</S.ListAddButton>}
-                    {addDayWorkIsOpen && <AddDayWorkForm
-                        setAddDayWorkIsOpen={setAddDayWorkIsOpen}
-                    />}
-
-                    {alldayworksData.map(dayWork =>
-                        <InnerListUI key={dayWork.dayWorkId} data={dayWork} />
-                    )}
-                </S.InnerListBox>
+                {!addDayWorkIsOpen && <S.ListAddButton
+                    onClick={() => {
+                        setAddDayWorkIsOpen(prev => !prev)
+                    }}><RiTodoFill /> 할 일 추가</S.ListAddButton>}
+                {addDayWorkIsOpen && <AddDayWorkForm
+                    setAddDayWorkIsOpen={setAddDayWorkIsOpen}
+                />}
+                {alldayworksData.map(dayWork =>
+                    <DayWorkUI key={dayWork.dayWorkId} data={dayWork} />
+                )}
             </S.DayWorkSection>
         </S.ScheduleBox>
     )

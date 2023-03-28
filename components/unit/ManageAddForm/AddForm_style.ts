@@ -11,10 +11,13 @@ export const Form = styled.form`
     align-items: center;
     gap: 5px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 `
 
 export const FormTitle = styled.h4`
+    gap: 10px;
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
     font-size: 15px;
     font-weight: 400;
@@ -115,6 +118,6 @@ export const Button = styled.button`
     font-size: 15px;
     transition: 0.2s all ease;
     :hover{
-        background: #FFB02E;
+        opacity: 0.6;
     }
 `
