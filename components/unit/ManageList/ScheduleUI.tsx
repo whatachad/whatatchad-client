@@ -7,6 +7,8 @@ import AddDayWorkForm from '../ManageAddForm/AddDayWorkForm';
 import { ScheduleType } from './ScheduleUI_type';
 import DayWorkUI from './DayWorkUI';
 import AccountUI from './AccountUI';
+import { BsFillCalendar2CheckFill, BsFillCalendarXFill, BsFillCheckCircleFill } from 'react-icons/bs';
+import { HiBadgeCheck, HiOutlineBadgeCheck } from 'react-icons/hi';
 
 const allAccountsData = [ // 비동기 통신 결과 예시
     {
@@ -83,17 +85,26 @@ const ScheduleUI = ({ Schedule }: ScheduleType) => {
     return (
         <S.ScheduleBox key={Schedule.scheduleId}>
             <S.ScheduleHeader>
-                <p>{`${Schedule.year}. ${Schedule.month}`}</p>
-                {Schedule.day}
-                <p>총 수입</p>
-                <p>{Schedule.totalIncome.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
-
-                <p>총 지출</p>
-                <p>{Schedule.totalSpend.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
-                {/* 
+                <S.ScheduleDateBox>
+                    <S.ScheduleSubText>{`${Schedule.year}. ${Schedule.month}`}</S.ScheduleSubText>
+                    <S.ScheduleDate>{Schedule.day}일</S.ScheduleDate>
+                </S.ScheduleDateBox>
+                <S.ScheduleAccountBox>
+                    <div>
+                        <S.ScheduleSubText>총 지출</S.ScheduleSubText>
+                        <S.ScheduleAccountText>{Schedule.totalSpend.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</S.ScheduleAccountText>
+                    </div>
+                    <div>
+                        <S.ScheduleSubText>예산 초과</S.ScheduleSubText>
+                        <S.ScheduleAccountText>{Schedule.totalSpend.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</S.ScheduleAccountText>
+                    </div>{/* 
                 <p>오늘 지출(예산-총지출)</p>
                 <p>{(Schedule.totalIncome - Schedule.totalSpend).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p> */}
-                <p>{Schedule.status}</p>
+
+                </S.ScheduleAccountBox>
+                <S.ScheduleStatus>
+                    <S.ScheduleSubText>목표 달성</S.ScheduleSubText>
+                    {Schedule.status ? <HiBadgeCheck /> : <HiOutlineBadgeCheck style={{ color: "#555555" }} />}</S.ScheduleStatus>
             </S.ScheduleHeader>
 
             <S.AccountSection>

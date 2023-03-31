@@ -1,6 +1,8 @@
 import PageTitle from '@/components/common/Page/PageTitle';
-import { ListBox, PageContainer, PageDesc } from '@/components/common/Page/Page';
+import { ListBox, PageContainer } from '@/components/common/Page/Page';
 import ScheduleUI from './ScheduleUI';
+import ManageContentsHeader from '@/components/common/Page/ManagePageHeader';
+import ManagePageHeader from '@/components/common/Page/ManagePageHeader';
 
 type Props = {
 }
@@ -31,7 +33,7 @@ const allScheduleData = [ // 비동기 통신 결과 예시
         "userId": 1,
         "totalIncome": 10000,
         "totalSpend": 2000,
-        "status": false,
+        "status": true,
         "year": "2023",
         "month": "03",
         "day": "21"
@@ -42,11 +44,8 @@ const ManageList = (props: Props) => {
 
     return (<PageContainer>
         <PageTitle title='Manage' location='청주시 흥덕구 복대동' />
-        <div>
-            <PageDesc>월별내역</PageDesc>
-            {/* 일일예산 차후 비동기통신으로 데이터 불러옴 */}
-            <p>일일예산 : 10,000원</p>
-        </div>
+        <ManagePageHeader title={"월별 내역"} budget={10000} />
+
         <ListBox>
             {allScheduleData.map((Schedule) =>
                 <ScheduleUI key={Schedule.scheduleId} Schedule={Schedule} />

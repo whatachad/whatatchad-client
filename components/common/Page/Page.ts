@@ -10,6 +10,12 @@ export const PageDesc = styled.h2`
   font-weight: normal;
 `
 
+
+export const PageSubDesc = styled.p`
+    font-size: 13px;
+    color: gray;
+`
+
 export const PageContentsBox = styled.div`
   background: #333333;
   border-radius: 10px;
@@ -20,6 +26,6 @@ export const PageContentsBox = styled.div`
 
 export const ListBox = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex-direction: column;
 `

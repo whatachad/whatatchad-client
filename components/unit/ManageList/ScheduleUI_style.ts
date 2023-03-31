@@ -3,13 +3,67 @@ import styled from "styled-components";
 export const ScheduleBox = styled.li`
     background: #333333;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     display: flex;
     gap: 20px;
     @media (max-width: 1024px ) {
         flex-direction: column;
     }
 `
+
+export const ScheduleHeader = styled.div`
+    min-width: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media (max-width: 1024px ) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+`
+
+
+export const ScheduleDateBox = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+export const ScheduleAccountBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    @media (max-width: 1024px ) {
+        flex-direction: row;
+        gap: 20px;
+    }
+`
+
+export const ScheduleSubText = styled.p`
+    font-size: 11px;
+    color: gray;
+`
+
+export const ScheduleAccountText = styled.h4`
+    font-size: 15px;
+`
+
+export const ScheduleDate = styled.h2`
+
+`
+
+export const ScheduleStatus = styled.div`
+    svg{
+        width: 30px;
+        height: 30px;
+    }
+    @media (max-width: 1024px ) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+`
+
 
 export const AccountSection = styled.section`
     width: 100%;
@@ -19,15 +73,7 @@ export const AccountSection = styled.section`
     flex: 2;
 `
 
-export const ScheduleHeader = styled.h2`
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
-    p{ 
-        font-size: 13px;
-        font-weight: 400;
-    }
-`
+
 
 export const DayWorkSection = styled.section`
     width: 100%;
