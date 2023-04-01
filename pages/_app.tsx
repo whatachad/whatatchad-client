@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { ThemeProvider, DefaultTheme } from "styled-components";
-import wrapper  from "../redux/store";
+import wrapper from "../redux/store";
 
 const theme: DefaultTheme = {
   colors: {
