@@ -5,6 +5,7 @@ import Head from "next/head";
 import { ThemeProvider, DefaultTheme } from "styled-components";
 import wrapper from "../redux/store";
 
+
 declare global {
   interface Window {
     kakao: any;
