@@ -1,6 +1,7 @@
 import { RoundedMenuIcon } from "@/components/common/Layout/NavigationTab/styles";
 import Image from "next/image";
 import React from "react";
+import { WorkoutDetailContainer, WorkoutInfo, WorkoutType } from "./styles";
 
 const WorkoutItem = () => {
   return (
@@ -12,18 +13,17 @@ const WorkoutItem = () => {
         width={300}
         height={200}
       />
-      <div className="WorkoutDetails">
-        <h3>Workout Name</h3>
-        <div>
+      <WorkoutDetailContainer>
+        <h3>강남 스포애니</h3>
+        <WorkoutInfo>
           <RoundedMenuIcon />
-
-          <h3>Gangnam spoany</h3>
-          <div className="WorkoutType">
-            <span>Workout Type</span>
-            <span>Workout Type</span>
-          </div>
-        </div>
-      </div>
+          <h3>강남구 논현동</h3>
+          <WorkoutType>
+            <span>헬스장</span>
+            <span>4km</span>
+          </WorkoutType>
+        </WorkoutInfo>
+      </WorkoutDetailContainer>
     </div>
   );
 };
