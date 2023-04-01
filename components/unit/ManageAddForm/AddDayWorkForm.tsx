@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction, useState } from 'react'
+import { RiTodoFill } from 'react-icons/ri';
 import * as S from './AddForm_style'
 
 type Props = {
@@ -21,7 +22,7 @@ const AddDayWorkForm = (props: Props) => {
 
     return (
         <S.Form>
-            <S.FormTitle>할 일 입력</S.FormTitle>
+            <S.FormTitle><RiTodoFill /> 할 일 입력</S.FormTitle>
             <S.RadioButtonBox>
                 <S.RadioItem onClick={onClickRadio} id="green" radio={radio}>여유</S.RadioItem>
                 <S.RadioItem onClick={onClickRadio} id="yellow" radio={radio}>중요</S.RadioItem>
