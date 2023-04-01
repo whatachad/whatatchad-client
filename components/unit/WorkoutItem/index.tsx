@@ -1,30 +1,43 @@
 import { RoundedMenuIcon } from "@/components/common/Layout/NavigationTab/styles";
 import Image from "next/image";
 import React from "react";
-import { WorkoutDetailContainer, WorkoutInfo, WorkoutType } from "./styles";
+import {
+  WorkoutDetailContainer,
+  WorkoutImageContainer,
+  WorkoutInfo,
+  WorkoutItemContainr,
+  WorkoutType,
+} from "./styles";
+import { Facility } from "@/types/workout";
 
-const WorkoutItem = () => {
+interface FacilityItemProps {
+  facility: Facility;
+}
+
+const WorkoutItem = ({ facility }: FacilityItemProps) => {
   return (
-    <div className="WorkoutItemContainr">
-      <Image
-        src="https://picsum.photos/200/300"
-        alt="Workout"
-        className="WorkoutImg"
-        width={300}
-        height={200}
-      />
+    <WorkoutItemContainr>
+      <WorkoutImageContainer>
+        <Image
+          src="https://picsum.photos/200/300"
+          alt="Workout"
+          className="WorkoutImg"
+          layout="fill"
+          objectFit="cover"
+        />
+      </WorkoutImageContainer>
       <WorkoutDetailContainer>
-        <h3>강남 스포애니</h3>
+        <p>{facility.name}</p>
         <WorkoutInfo>
-          <RoundedMenuIcon />
-          <h3>강남구 논현동</h3>
+          <RoundedMenuIcon style={{ background: "#666666" }} />
+          <h3>{facility.address}</h3>
           <WorkoutType>
-            <span>헬스장</span>
+            <span>{facility.type}</span>
             <span>4km</span>
           </WorkoutType>
         </WorkoutInfo>
       </WorkoutDetailContainer>
-    </div>
+    </WorkoutItemContainr>
   );
 };
 
