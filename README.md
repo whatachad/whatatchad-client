@@ -9,12 +9,21 @@
 | ------------------------------------------------ | -------- |
 | [Seongyeon Ha](https://github.com/iDevBrandon)   | Frontend |
 | [GyeongSeok Lee](https://github.com/lekosk2001)  | Frontend |
-| [Sky](https://github.com/hopee0411)              | Backend  |
 | [Jinhyeon Kwak](https://github.com/JinhyeonKwak) | Backend  |
+| [???](???)              | Backend  |
+
+## How to run
+
+```bash
+
+.env 파일을 생성하고, 발급받은 카카오 지도 Javascript AppKey 키를 발급받아서 넣어주세요.
+
+```
 
 ## 🔨 Stacks
 
 ### Front
+
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)

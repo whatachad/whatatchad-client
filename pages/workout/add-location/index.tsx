@@ -1,6 +1,7 @@
 import PageTitle from "@/components/common/Page/PageTitle";
 import React from "react";
 import { AddLocationContainer } from "./styles";
+import Map from "@/components/unit/WorkoutMap";
 
 type Props = {};
 
@@ -24,7 +25,10 @@ const index = (props: Props) => {
         placeholder="주소 (입력불가 / 아래 지도 마커선택 시, 위도경도 정보를 통해 주소를 불러옴)"
       />
 
-      <div>Map component</div>
+      <div>
+        Map component
+        <Map latitude={123} longitude={23} />
+      </div>
 
       <select id="facility-select">
         <option value="">종류 선택 (셀렉터)</option>
@@ -33,6 +37,8 @@ const index = (props: Props) => {
         <option value="other">Other</option>
       </select>
       <TextArea cols={30} rows={10} placeholder="설명..." />
+
+      <button>시설 등록</button>
     </AddLocationContainer>
   );
 };
