@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction, useState } from 'react'
+import { MdAccountBalanceWallet } from 'react-icons/md';
 import * as S from './AddForm_style'
 
 type Props = {
@@ -20,7 +21,7 @@ const AddAccountForm = (props: Props) => {
 
     return (
         <S.Form onSubmit={submitForm}>
-            <S.FormTitle>가계부 입력</S.FormTitle>
+            <S.FormTitle> <MdAccountBalanceWallet /> 가계부 입력</S.FormTitle>
             <S.RadioButtonBox>
                 <S.RadioItem onClick={onClickRadio} id="green" radio={radio}>수입</S.RadioItem>
                 <S.RadioItem onClick={onClickRadio} id="red" radio={radio}>지출</S.RadioItem>
