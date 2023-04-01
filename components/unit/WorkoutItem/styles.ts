@@ -4,6 +4,7 @@ export const WorkoutItemContainr = styled.div`
   position: relative;
   width: 100%;
   max-width: 600px;
+  border-radius: 10px;
 `;
 
 export const WorkoutImageContainer = styled.div`
