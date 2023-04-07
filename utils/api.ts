@@ -16,7 +16,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://129.154.212.45:3000/v1",
+  baseURL: "http://whatachad.site:3000/v1",
   withCredentials: true,
 });
 
