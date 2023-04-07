@@ -34,11 +34,11 @@ const Login = () => {
     e.preventDefault();
     const { id, password } = loginState;
     dispatch(login({ id, password }));
-
-    if (loginDone) {
-      router.push("/");
-    }
   };
+
+  if (loginDone) {
+    router.push("/");
+  }
 
   return (
     <div>
