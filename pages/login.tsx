@@ -40,40 +40,27 @@ const Login = () => {
   if (loginDone) {
     router.push("/");
   }
+ 
 
+const login = () => {
   return (
     <div>
       <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label>
-          ID:
-          <input
-            type="text"
-            name="id"
-            value={loginState.id}
-            onChange={handleChange}
-            required
-          />
+          Email:
+          <input type="email" required />
         </label>
         <br />
         <label>
           Password:
-          <input
-            type="password"
-            name="password"
-            value={loginState.password}
-            onChange={handleChange}
-            required
-          />
+          <input type="password" required />
         </label>
         <br />
-        <button type="submit" disabled={loginLoading}>
-          {loginLoading ? "Logging in..." : "Login"}
-        </button>
-        {loginError && <div>{loginError}</div>}
+        <button type="submit">Login</button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default login;
