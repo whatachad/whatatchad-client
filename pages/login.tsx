@@ -34,33 +34,45 @@ const Login = () => {
     e.preventDefault();
     const { id, password } = loginState;
     dispatch(login({ id, password }));
-    console.log("success!");
   };
 
   if (loginDone) {
     router.push("/");
   }
- 
 
-const login = () => {
   return (
     <div>
       <h1>Login</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
-          Email:
-          <input type="email" required />
+          ID:
+          <input
+            type="text"
+            name="id"
+            value={loginState.id}
+            onChange={handleChange}
+            required
+          />
         </label>
         <br />
         <label>
           Password:
-          <input type="password" required />
+          <input
+            type="password"
+            name="password"
+            value={loginState.password}
+            onChange={handleChange}
+            required
+          />
         </label>
         <br />
-        <button type="submit">Login</button>
+        <button type="submit" disabled={loginLoading}>
+          {loginLoading ? "Logging in..." : "Login"}
+        </button>
+        {loginError && <div>{loginError}</div>}
       </form>
     </div>
   );
 };
 
-export default login;
+export default Login;
