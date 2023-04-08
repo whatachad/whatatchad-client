@@ -37,16 +37,7 @@ function Map({ latitude, longitude }: MapProps) {
     return () => mapScript.removeEventListener("load", onLoadKakaoMap);
   }, [latitude, longitude]);
 
-  return (
-    <MapContainer
-      id="map"
-      style={{
-        // 지도의 크기
-        width: "100%",
-        height: "450px",
-      }}
-    />
-  );
+  return <MapContainer id="map" />;
 }
 
 export default Map;

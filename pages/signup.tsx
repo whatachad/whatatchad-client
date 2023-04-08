@@ -1,11 +1,8 @@
-import { useEffect, useReducer } from "react";
+import { useReducer } from "react";
 import { useDispatch } from "react-redux";
 import { signup } from "@/redux/actions/user";
 import { AnyAction, ThunkDispatch } from "@reduxjs/toolkit";
 import { SignupData } from "@/types/users";
-import { useSelector } from "react-redux";
-import { ReducerStates } from "@/redux/store";
-import { useRouter } from "next/router";
 
 type State = {};
 
@@ -44,17 +41,6 @@ const reducer = (state: SignupData, action: any) => {
 const Signup = () => {
   const dispatch: AppDispatch = useDispatch();
   const [state, dispatchForm] = useReducer(reducer, initialState);
-  const router = useRouter();
-
-  const { signupDone, signupError, signupLoading } = useSelector(
-    (state: ReducerStates) => state.user
-  );
-
-  useEffect(() => {
-    if (signupDone) {
-      router.replace("/login");
-    }
-  }, [signupDone, router]);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
