@@ -34,6 +34,7 @@ const Login = () => {
     e.preventDefault();
     const { id, password } = loginState;
     dispatch(login({ id, password }));
+    console.log("success!");
   };
 
   if (loginDone) {
