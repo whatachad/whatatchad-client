@@ -10,7 +10,7 @@
 | [Seongyeon Ha](https://github.com/iDevBrandon)   | Frontend |
 | [GyeongSeok Lee](https://github.com/lekosk2001)  | Frontend |
 | [Jinhyeon Kwak](https://github.com/JinhyeonKwak) | Backend  |
-| [???](???)              | Backend  |
+| [HyunJung Kim](https://github.com/HyunJng)       | Backend  |
 
 ## How to run
 
